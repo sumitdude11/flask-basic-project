@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page1</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='cs/css1.css')}}" > -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">DATE:</div>
+        <div class="col-sm-2">Link_click :</div>
+        <div class="col-sm-1">Spends:</div>
+        <div class="col-sm-1">impressions:</div>
+        <div class="col-sm-2">Clicks:</div>
+
+
+    </div>
+    {% for row in data %}
+
+        <div class="row">
+            <div class="col-sm-2">  {{row[0]}}</div>
+            <div class="col-sm-1">  {{row[1]}}</div>
+            <div class="col-sm-2">{{ row[2] }} </div>
+            <div class="col-sm-1">{{ row[3] }} </div>
+            <div class="col-sm-2">{{ row[4] }} </div>
+
+        </div>
+        <br>
+    {% endfor %}
+</div>
+</body>
+</html>
